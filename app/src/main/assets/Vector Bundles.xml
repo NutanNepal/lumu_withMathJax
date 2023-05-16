@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flashcards>
+    <flashcard>
+        <question>Fiber Bundles</question>
+        <answer><![CDATA[ A fiber bundle \(E\) with base \(B\) and a fiber \(F\) is a family of smooth manifolds,
+            all diffeomorphic to \(F\), smoothly parametrized by \(B\).
+            A (smooth) fiber bundle \((E,\ B,\ \varphi,\ F)\) is given by:
+            1. Smooth manifolds \(E\), \(B\), and \(F\).
+            2. \(\varphi\) is a smooth map (called the bundle projection) from \(E\) to \(B\).
+            3. For each \(b \in B\), there exists an open set \(U\) containing \(b\) such that \(\varphi^{-1}(U)\) is diffeomorphic to \(U \times F\) via \(\phi\), and \(\pi_1 \circ \phi : \varphi^{-1}(U) \longrightarrow U\) is equal to \(\varphi\).
+        ]]></answer>
+    </flashcard>
+    <flashcard>
+        <question>Section of a Fiber Bundle $(E,\ B,\ \varphi,\ F)$.</question>
+        <answer>Function $\sigma:\ B\longrightarrow E$ such that $\varphi\circ\sigma=\ $id$_B$.\text{\\\\}
+            $\sigma$ is a smooth section of $(E,\ B,\ \varphi,\ F)$ if it a smooth map between manifolds.
+        </answer>
+    </flashcard>
+    <flashcard>
+        <question>Vector Bundle over a manifold $B$</question>
+        <answer>\text{For the smooth fiber bundle }(E,\ B,\ \varphi,\ F),
+        \text{suppose that for } k\geq 0
+        </answer>
+    </flashcard>
+    <flashcard>
+        <question>adjoint associativity</question>
+        <answer>aa</answer>
+    </flashcard>
+</flashcards>

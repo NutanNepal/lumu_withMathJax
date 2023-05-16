@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flashcards>
+    <flashcard>
+        <question>\text{Fatou's Lemma}</question>
+        <answer></answer>
+    </flashcard>
+    <flashcard>
+        <question>What does it mean for a set $X$ to be total in $L^p$?</question>
+        <answer>Span of $X$ is dense in $L^p$.</answer>
+    </flashcard>
+    <flashcard>
+        <question>Relation between $L^1$ and $L^\infty$?</question>
+        <answer>The dual of $L^1$ is $L^\infty$ but not vice-versa.</answer>
+    </flashcard>
+    <flashcard>
+        <question>Bolzano-Weierstrass theorem and its weak analogue?</question>
+        <answer>what?</answer>
+    </flashcard>
+    <flashcard>
+        <question>Dominated Convergence Theorem</question>
+        <answer>what?</answer>
+    </flashcard>
+</flashcards>

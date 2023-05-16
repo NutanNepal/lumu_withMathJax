@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flashcards>
+    <flashcard>
+        <question>\mathbf{Classical\ inequality\ I:\ }
+            Let $a, b \geq 0$, and $p \geq 1$. Prove that
+            $$(a+b)^p \leq 2^{p-1} (a^p + b^p).$$</question>
+        <answer>Use convexity of $f(x)=x^p$.</answer>
+    </flashcard>
+    <flashcard>
+        <question>\mathbf{(Young's\ inequality)}
+            For $p >1$, let $q$ be its conjugate, i.e.
+            $$\frac{1}{p} + \frac{1}{q} = 1$$.
+            Prove the following inequality:
+            $$ u \cdot v \leq \frac{1}{p} u^p + \frac{1}{q} v^q,$$
+            $\forall u, v \geq 0.$</question>
+        <answer>Follows from convexity of $e^x$.</answer>
+    </flashcard>
+    <flashcard>
+        <question>\textbf{Holder's\ inequality:\ }
+
+            Let $p,q \geq 1$ be conjugate exponents. Let $$x=\{x_{i}\}_{1}^{\infty}\in l^{p}$$ and $$y=\{y_{i}\}_{1}^{\infty}\in l^{q}$$. Then $$xy=\{x_{i}y_{i}\}_{1}^{\infty} \in l^{1}$$ and $$\sum_{1}^{\infty}{|x_{i}y_{i}|}\leq
+            \left(\sum_{1}^{\infty}{|x_{i}|^{p}}\right)^{\frac{1}{p}}
+            \cdot
+            \left(\sum_{1}^{\infty}{|y_{i}|^{q}}\right)^{\frac{1}{q}}.$$
+            </question>
+        <answer>Use Young's inequality with $$u=\frac{x_i}{m}$$ and $$m^p=\sum_{k=1}^\infty{|x_k|^p}$$;\ $$v=\frac{y_i}{n}$$ and $$n^p=\sum_{k=1}^\infty{|y_k|^p}$$.</answer>
+    </flashcard>
+    <flashcard>
+        <question>\textbf{Minkowski's\ inequality:\ } Let $p\geq 1$ and $x=\{x_{i}\}_{1}^{\infty} \in l^p$ and $y=\{y_{i}\}_{1}^{\infty} \in l^p$. Then
+            $x+y =
+            \{x_{i} + y_{i}\}_{1}^{\infty} \in l^{p}$ and
+            $$\left(\sum_{1}^{\infty}{|x_{i} + y_{i}|^p}\right)^
+            \frac{1}{p}\leq
+            \left(\sum_{1}^{\infty}{|x_{i}|^{p}}\right)^{\frac{1}{p}}
+            +$$
+            $$\left(\sum_{1}^{\infty}{|y_{i}|^{p}}\right)^{\frac{1}{p}}.$$
+        </question>
+        <answer>First part follows from the classical inequality I. The second part follows from the induction and Holder's inequality with
+            $$\sum_{1}^{\infty}{|x_{i} + y_{i}|^p}=\sum_{1}^{\infty}{|x_i+y_1|\cdot$$
+            $$|x_{i} + y_{i}|^{p-1}},$$
+            \vspace{1mm}
+            and by observing that $$\{|x_i+y_i|^{p-1}\}_i^{\infty}\in l^q.$$
+        </answer>
+    </flashcard>
+    <flashcard>
+        <question>Prove Jensen's Inequality for Sums:
+            $$\left(\sum_{i=1}^{\infty}{|x_i|^{p_2}}\right)^{1/{p_2}}
+            \leq\left(\sum_{i=1}^{\infty}{|x_i|^{p_1}}\right)^
+            {1/{p_1}}$$
+            $\forall 1\leq p_1 &lt; p_2&lt; \infty$.
+        </question>
+        <answer>Use Minkowski and mathematical induction to prove the inequality for finite sequences. Take limit $k\to\infty$ to prove Jensen's.
+        </answer>
+    </flashcard>
+</flashcards>

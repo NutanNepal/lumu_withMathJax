@@ -1,0 +1,17 @@
+<resources>
+    <style name="Widget.Theme.Lumu_Flashcards.MyView" parent="">
+        <item name="android:background">@color/gray_400</item>
+        <item name="android:fontFamily">@font/cmunrm</item>
+    </style>
+    <style name="CustomTextAppearanceBold">
+        <item name="android:fontFamily">@font/cmunbx</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="CustomTextAppearanceNormal">
+        <item name="android:fontFamily">@font/cmunrm</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
+
+</resources>
