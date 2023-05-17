@@ -22,6 +22,7 @@ class FlashcardFragment(
     private lateinit var questionWebView: WebView
     private lateinit var answerWebView: WebView
     private var isShowingQuestion = true
+    private var animationDuration: Long = 150
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -65,7 +66,7 @@ class FlashcardFragment(
     private fun flipCard() {
         ViewCompat.animate(questionCardView)
             .rotationY(-90f)
-            .setDuration(200)
+            .setDuration(animationDuration)
             .withEndAction {
                 isShowingQuestion = false
                 questionCardView.visibility = View.GONE
@@ -75,7 +76,7 @@ class FlashcardFragment(
                 // Start second animation
                 ViewCompat.animate(answerCardView)
                     .rotationY(0f)
-                    .setDuration(200)
+                    .setDuration(animationDuration)
                     .start()
             }
             .start()
@@ -84,7 +85,7 @@ class FlashcardFragment(
     private fun flipCardBack() {
         ViewCompat.animate(answerCardView)
             .rotationY(90f)
-            .setDuration(200)
+            .setDuration(animationDuration)
             .withEndAction {
                 isShowingQuestion = true
                 answerCardView.visibility = View.GONE
@@ -94,7 +95,7 @@ class FlashcardFragment(
                 // Start second animation
                 ViewCompat.animate(questionCardView)
                     .rotationY(0f)
-                    .setDuration(200)
+                    .setDuration(animationDuration)
                     .start()
             }
             .start()

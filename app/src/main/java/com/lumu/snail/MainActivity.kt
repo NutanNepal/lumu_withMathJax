@@ -1,6 +1,9 @@
 package com.lumu.snail
 
+import android.annotation.SuppressLint
 import android.os.Bundle
+import android.view.View
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.OnBackPressedCallback
@@ -22,6 +25,7 @@ class MainActivity : AppCompatActivity(),
         super.onSaveInstanceState(savedInstanceState)
     }
 
+    @SuppressLint("UseCompatLoadingForDrawables")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -39,15 +43,12 @@ class MainActivity : AppCompatActivity(),
                         // Otherwise, go back to the CategoriesFragment and update the title
                         currentTitle = "Categories"
                         replaceFragmentContainer(R.id.fragmentContainerView, CategoriesFragment())
+                        this@MainActivity.findViewById<ImageButton>(R.id.btn_back).visibility=View.INVISIBLE
                     }
                 }
             }
         // Add the callback to the activity's back stack
         onBackPressedDispatcher.addCallback(this, callback)
-
-        this.findViewById<ImageView>(R.id.btn_back).setOnClickListener {
-            onBackPressedDispatcher.onBackPressed()
-        }
 
         if (savedInstanceState != null) {
             currentTitle =
@@ -61,11 +62,15 @@ class MainActivity : AppCompatActivity(),
         }
     }
 
-
     override fun onCategoryItemClick(category: Category) {
         // Update the title with the selected category name
         currentTitle = category.toString()
+        val btnBack = this@MainActivity.findViewById<ImageButton>(R.id.btn_back)
         this@MainActivity.findViewById<TextView>(R.id.textView).text = currentTitle
+        btnBack.visibility = View.VISIBLE
+        btnBack.setOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+        }
         // Replace the current fragment with a new ChaptersFragment for the selected category
         val fragment = ChaptersFragment.newInstance(category)
         replaceFragmentContainer(R.id.fragmentContainerView, fragment)
@@ -74,6 +79,7 @@ class MainActivity : AppCompatActivity(),
     override fun onChapterItemClick(chapter: String) {
         // Start the FlashcardActivity for the selected chapter
         startActivity(FlashcardActivity.newIntent(this@MainActivity, chapter))
+        //overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right)
     }
 
     fun replaceFragmentContainer(oldFragment: Int, newFragment: Fragment) {

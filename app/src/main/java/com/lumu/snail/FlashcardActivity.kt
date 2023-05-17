@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.SystemClock
 import android.util.Xml
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.core.view.WindowCompat
 import androidx.fragment.app.Fragment
@@ -45,6 +46,9 @@ class FlashcardActivity: FragmentActivity() {
         // Set the content view for this activity
         setContentView(R.layout.activity_flashcard)
 
+        this.findViewById<ImageButton>(R.id.btn_back).setOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+        }
         // Set the chapter title from the extra provided by the intent
         this.findViewById<TextView>(R.id.flashcard_title).text = getChapter()
 

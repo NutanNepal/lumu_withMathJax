@@ -5,8 +5,17 @@
         <answer>pr</answer>
     </flashcard>
     <flashcard>
-        <question>extension of the scalars</question>
-        <answer>eots</answer>
+        <question><![CDATA[
+            <strong>Actions of a group</strong> on different kind of objects
+            provides many information on the group itself. What
+            are two main actions we study?
+            ]]>
+        </question>
+        <answer><![CDATA[
+            1. Permutation Representation: Action of a group \(G\) on a set \(S\).<br/><br/>
+            2. Linear Representation: Action of a group \(G\) on a module \(V\).
+            ]]>
+        </answer>
     </flashcard>
     <flashcard>
         <question>character table of S3</question>

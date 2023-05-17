@@ -19,10 +19,18 @@
         card_view:contentPadding="5dp"
         android:foreground="?android:attr/selectableItemBackground">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/normal_font"
+            android:text="@string/question"
+            android:textSize="@dimen/normal_font"
+            android:textAppearance="@style/CustomTextAppearanceNormal"/>
+
         <WebView
             android:id="@+id/question_webView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/normal_font"
             android:layout_gravity="center"
             android:contextClickable="false"
             android:hapticFeedbackEnabled="true"/>
@@ -41,8 +49,16 @@
         android:visibility="gone"
         android:foreground="?android:attr/selectableItemBackground">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/normal_font"
+            android:textSize="@dimen/normal_font"
+            android:text="@string/answer"
+            android:textAppearance="@style/CustomTextAppearanceNormal"/>
+
         <WebView
             android:id="@+id/answer_webView"
+            android:layout_marginTop="@dimen/normal_font"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

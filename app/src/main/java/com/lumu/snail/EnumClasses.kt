@@ -7,18 +7,14 @@ enum class Category(
         "Algebra", "Analysis", "Smooth Manifolds", "Algebraic Topology"
     )),
     Topics(listOf(
-        "Representation Theory",
-        "The Fundamental Group",
-        "Hilbert Spaces", "Normed Spaces",
-        "Singular Homology", "Vector Bundles"
-    )),
-    Exercises(listOf(
-        "Metric Spaces",
-        "The Fundamental Group", "Homology",
-        "Field Theory", "Group Theory",
+        "Field Theory", "Group Theory", "Hilbert Spaces",
         "Lp-Spaces", "Measure Theory",
         "Modules and Vector Spaces",
+        "Metric Spaces", "Normed Spaces",
         "Representation Theory", "Ring Theory",
+        "Singular Homology", "The Fundamental Group", "Vector Bundles"
+    )),
+    Exercises(listOf(
     )),
     Everything(listOf(
     ))

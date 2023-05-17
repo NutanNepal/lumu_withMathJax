@@ -28,6 +28,7 @@
             android:layout_centerVertical="true"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_arrow_back"
+            android:visibility="gone"
             android:contentDescription="@string/back_button" />
 
         <TextView

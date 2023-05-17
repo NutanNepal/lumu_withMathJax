@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <flashcards>
     <flashcard>
-        <question><![CDATA[<strong>Classical inequality I:</strong><br />
-            Let \(a, b \geq 0\), and \(p \geq 1\). Prove that<br />
-            \((a+b)^p \leq 2^{p-1} (a^p + b^p)\).]]></question>
-        <answer><![CDATA[Use convexity of \(f(x)=x^p\).]]></answer>
+        <question><![CDATA[<strong>Measurable sets</strong><br />
+            Given an outer measure \(m^*\) on a set \(X\), a set
+            \(A\subset X\) is measurable iff
+        ]]></question>
+        <answer><![CDATA[
+            \[m^*(Y)=m^*(A\cap Y) +m^*(A^c\cap Y)\]
+            for all \(Y\subset X\).
+        ]]></answer>
     </flashcard>
     <flashcard>
         <question><![CDATA[<strong>Young's inequality:</strong><br />

@@ -3,20 +3,28 @@ package com.lumu.snail
 class MathJaxParse{
     companion object{
         // set the MathJax configuration options
-        private const val mathJaxUrl = "file:///android_asset/mathjax/es5/tex-chtml.js"
+        private const val mathJaxUrl = "file:///android_asset/mathjax/es5/tex-chtml-full.js"
         private const val mathJaxConfig = """
         MathJax.Hub.Config({
-        extensions: ["tex2jax.js"],
-        jax: ["input/TeX", "output/CommonHTML"],
-        tex2jax: {
-            inlineMath: [['\\(', '\\)'], ['$', '$']],
-            displayMath: [['$$', '$$'], ['\\[', '\\]']],
-            processEscapes: true
-        },
-        showMathMenu: false,
-        messageStyle: "none"
+            jax: ["input/TeX", "output/CommonHTML"],
+            tex: {
+                inlineMath: [['\\(', '\\)'], ['$', '$']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                processRefs: true,
+                digits: /^(?:[0-9]+(?:\{,\}[0-9]{3})*(?:\.[0-9]*)?|\.[0-9]+)/,
+                tagSide: 'right',
+                tagIndent: '0.8em',
+                maxMacros: 1000,
+                maxBuffer: 5 * 1024,
+                formatError: (jax, err) => jax.formatError(err)
+            },
+            showMathMenu: false,
+            messageStyle: "none"
         });
         """
+
         fun generateHtmlContent(inputString: String): String {
             val htmlContent = """
                 <html>
