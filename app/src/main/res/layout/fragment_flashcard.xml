@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:descendantFocusability="blocksDescendants"
-    android:animateLayoutChanges="true"
     tools:context=".FlashcardFragment"
     android:orientation="horizontal">
 
@@ -12,28 +11,34 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/question_cardView"
-        android:layout_margin="15dp"
-        card_view:cardBackgroundColor="@color/material_dynamic_primary10"
-        card_view:cardCornerRadius="2dp"
-        card_view:cardElevation="20dp"
+        android:layout_margin="12dp"
+        card_view:cardCornerRadius="0dp"
+        card_view:cardElevation="100dp"
         card_view:contentPadding="5dp"
         android:foreground="?android:attr/selectableItemBackground">
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="@dimen/normal_font"
+            android:layout_height="@dimen/normal_font_holder"
             android:text="@string/question"
             android:textSize="@dimen/normal_font"
+            android:textStyle="italic"
             android:textAppearance="@style/CustomTextAppearanceNormal"/>
 
-        <WebView
-            android:id="@+id/question_webView"
+        <com.lumu.snail.NestedScrollableHost
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/normal_font"
-            android:layout_gravity="center"
-            android:contextClickable="false"
-            android:hapticFeedbackEnabled="true"/>
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/normal_font_holder">
+
+            <WebView
+                android:id="@+id/question_webView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contextClickable="false"
+                android:hapticFeedbackEnabled="true"/>
+        </com.lumu.snail.NestedScrollableHost>
+
 
     </androidx.cardview.widget.CardView>
 
@@ -42,7 +47,6 @@
         android:layout_height="match_parent"
         android:id="@+id/answer_cardView"
         android:layout_margin="15dp"
-        card_view:cardBackgroundColor="@color/material_dynamic_primary10"
         card_view:cardCornerRadius="2dp"
         card_view:cardElevation="20dp"
         card_view:contentPadding="5dp"
@@ -51,19 +55,25 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="@dimen/normal_font"
+            android:layout_height="@dimen/normal_font_holder"
             android:textSize="@dimen/normal_font"
             android:text="@string/answer"
+            android:textStyle="italic"
             android:textAppearance="@style/CustomTextAppearanceNormal"/>
 
-        <WebView
-            android:id="@+id/answer_webView"
-            android:layout_marginTop="@dimen/normal_font"
+        <com.lumu.snail.NestedScrollableHost
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:clickable="false"
-            android:focusable="false" />
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/normal_font_holder">
+
+            <WebView
+                android:id="@+id/answer_webView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:clickable="false"
+                android:focusable="false" />
+        </com.lumu.snail.NestedScrollableHost>
 
     </androidx.cardview.widget.CardView>
 </LinearLayout>

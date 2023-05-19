@@ -1,19 +1,31 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Theme.Lumu_Flashcards_day" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_200</item>
         <item name="colorPrimaryVariant">@color/purple_200</item>
-        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorOnPrimary">@color/creamy</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondary">@color/creamy</item>
         <item name="colorSecondaryVariant">@color/teal_200</item>
-        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorOnSecondary">@color/creamy</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:enforceNavigationBarContrast">false</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
-        <item name="android:homeAsUpIndicator">@drawable/ic_arrow_back</item>
+
+        <!-- enable window content transitions -->
+        <item name="android:windowActivityTransitions">true</item>
+        <!-- specify enter and exit transitions -->
+        <item name="android:windowEnterTransition">@transition/fade_in</item>
+        <item name="android:windowExitTransition">@transition/fade_out</item>
+
+        <!-- specify shared element transitions-->
+        <item name="android:windowSharedElementEnterTransition">@transition/fade_in</item>
+        <item name="android:windowSharedElementExitTransition">@transition/fade_out</item>
+
+        <item name="android:colorBackground">@color/launcher</item>
+
     </style>
 
     <style name="Theme.Lumu_Flashcards_day.NoActionBar">

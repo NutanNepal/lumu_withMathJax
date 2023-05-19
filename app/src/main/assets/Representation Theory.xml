@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <flashcards>
     <flashcard>
-        <question>permutation representation</question>
-        <answer>pr</answer>
+        <question><![CDATA[How can we classify the linear representations of a group?]]></question>
+        <answer><![CDATA[
+            <ol>
+                <li>Decomposable/ Indecomposable,</li>
+                <li></li>
+            </ol>
+        ]]></answer>
     </flashcard>
     <flashcard>
-        <question>extension of the scalars</question>
-        <answer>eots</answer>
+        <question><![CDATA[Decomposable representation]]></question>
+        <answer><![CDATA[A representation is decomposable if the \(FG-\)module that affords
+        it is a decomposable module.]]>
+        </answer>
     </flashcard>
     <flashcard>
         <question>character table of S3</question>

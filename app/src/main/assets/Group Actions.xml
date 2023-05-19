@@ -1,0 +1,62 @@
+<flashcards>
+    <flashcard>
+        <question><![CDATA[Define group action.]]></question>
+        <answer><![CDATA[
+            A group action of a group \( G \) on a set \( S \) is a function
+            \[
+            \cdot: G \times S \to S
+            \]
+            that satisfies the following properties:
+            <ol>
+                <li>For all \( s \) in \( S \), \( e \cdot s = s \), where \( e \) is the identity element of \( G \).</li>
+                <li>For all \( g, h \) in \( G \) and \( s \) in \( S \), \( (gh) \cdot s = g \cdot (h \cdot s) \).</li>
+            </ol>
+        ]]></answer>
+    </flashcard>
+    <flashcard>
+        <question><![CDATA[What is the orbit of an element under a group action?]]></question>
+        <answer><![CDATA[
+            The orbit of an element \( s \) in \( S \) under a group action of \( G \) is the set
+            \[
+            \text{{Orb}}(s) = \{ g \cdot s : g \in G \}
+            \]
+            which contains all elements obtained by applying the group action of \( G \) to \( s \).
+        ]]></answer>
+    </flashcard>
+    <flashcard>
+        <question><![CDATA[Define the stabilizer of an element under a group action.]]></question>
+        <answer><![CDATA[
+            The stabilizer of an element \( s \) in \( S \) under a group action of \( G \) is the subgroup
+            \[
+            \text{{Stab}}(s) = \{ g \in G : g \cdot s = s \}
+            \]
+            which consists of all elements in \( G \) that fix \( s \) under the group action.
+        ]]></answer>
+    </flashcard>
+    <flashcard>
+        <question><![CDATA[State the Orbit-Stabilizer theorem.]]></question>
+        <answer><![CDATA[
+            The Orbit-Stabilizer theorem states that for any group \( G \) acting on a set \( S \), the size of the orbit of an element \( s \) is equal to the index of its stabilizer:
+            \[
+            |\text{{Orb}}(s)| = \frac{{|G|}}{{|\text{{Stab}}(s)|}}
+            \]
+        ]]></answer>
+    </flashcard>
+    <flashcard>
+        <question><![CDATA[Define the notion of transitivity for a group action.]]></question>
+        <answer><![CDATA[
+            A group action of \( G \) on a set \( S \) is said to be transitive if there is only one orbit,
+            i.e., for any two elements \( s, t \) in \( S \), there exists an element \( g \) in \( G \) such that \( g \cdot s = t \).
+            Here transitive action of \(G\) are the 'indecomposable' permutation representation of \( G\).
+        ]]></answer>
+    </flashcard>
+    <flashcard>
+        <question><![CDATA[What is the kernel of a group action?]]></question>
+        <answer><![CDATA[
+            The kernel of a group action of \( G \) on a set \( S \) is the set of elements in \( G \) that fix every element in \( S \):
+            \[
+            \text{{ker}}(\cdot) = \{ g \in G : g \cdot s = s \text{{ for all }} s \in S \}
+            \]
+        ]]></answer>
+    </flashcard>
+</flashcards>

@@ -35,11 +35,11 @@ class MathJaxParse{
                             src: url('file:///android_res/font/cmunrm.ttf');
                         }
                         body {
-                            background-color:#121225;
+                            background-color:#181225;
                             color:#ffffff;
                             font-family: "CompModern", sans-serif;
-                            font-size: 20px;
-                            line-height: 1.5;
+                            font-size: 18px;
+                            line-height: 1.3;
                         }
                     </style>
                     <script src='$mathJaxUrl' id="MathJax-script" async></script>

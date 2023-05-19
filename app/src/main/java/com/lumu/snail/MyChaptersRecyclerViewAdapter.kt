@@ -12,7 +12,9 @@ class MyChaptersRecyclerViewAdapter(
 ) : RecyclerView.Adapter<MyChaptersRecyclerViewAdapter.ViewHolder>() {
 
     // Store the chapter list as a property
-    private val chapterList = category.chapterList
+    private val chapterList = category.chapterList.sortedWith(
+        compareBy(String.CASE_INSENSITIVE_ORDER) { it }
+    )
 
     // Create the ViewHolder by inflating the view from the layout
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

@@ -1,0 +1,6 @@
+<transitionSet xmlns:android="http://schemas.android.com/apk/res/android">
+    <fade
+        android:duration="600"
+        android:fadingMode="fade_in_out"
+        />
+</transitionSet>

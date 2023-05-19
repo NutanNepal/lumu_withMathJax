@@ -1,10 +1,11 @@
 package com.lumu.snail
 
 import android.annotation.SuppressLint
+import android.app.ActivityOptions
 import android.os.Bundle
 import android.view.View
+import android.view.animation.LinearInterpolator
 import android.widget.ImageButton
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
@@ -16,7 +17,7 @@ class MainActivity : AppCompatActivity(),
     MyCategoriesRecyclerViewAdapter.OnCategoryItemClickListener,
     MyChaptersRecyclerViewAdapter.OnChapterItemClickListener {
 
-    private var currentTitle = "Categories"
+    private var currentTitle = "Home"
 
     override fun onSaveInstanceState(savedInstanceState: Bundle) {
         savedInstanceState.run {
@@ -32,18 +33,28 @@ class MainActivity : AppCompatActivity(),
         // Hide the system window decorations
         WindowCompat.setDecorFitsSystemWindows(window, false)
         supportActionBar!!.hide()
+        val btnBack = this.findViewById<ImageButton>(R.id.btn_back)
 
+        btnBack.setOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+        }
         val callback: OnBackPressedCallback =
             object : OnBackPressedCallback(true /* enabled by default */) {
                 override fun handleOnBackPressed() {
-                    if (currentTitle == "Categories") {
+                    if (currentTitle == "Home") {
                         // If already on the CategoriesFragment, call the default back behavior (exit the app)
                         finish()
                     } else {
                         // Otherwise, go back to the CategoriesFragment and update the title
-                        currentTitle = "Categories"
+                        currentTitle = "Home"
                         replaceFragmentContainer(R.id.fragmentContainerView, CategoriesFragment())
-                        this@MainActivity.findViewById<ImageButton>(R.id.btn_back).visibility=View.INVISIBLE
+                        btnBack.animate().rotationXBy(-90f)
+                            .setDuration(400)
+                            .setInterpolator(LinearInterpolator())
+                            .withEndAction {
+                                btnBack.visibility = View.INVISIBLE
+                            }
+                            .start()
                     }
                 }
             }
@@ -52,10 +63,10 @@ class MainActivity : AppCompatActivity(),
 
         if (savedInstanceState != null) {
             currentTitle =
-                savedInstanceState.getString("CURRENT_NAV_STATE", currentTitle) ?: "Categories"
+                savedInstanceState.getString("CURRENT_NAV_STATE", currentTitle) ?: "Home"
         }
 
-        if (currentTitle == "Categories") {
+        if (currentTitle == "Home") {
             replaceFragmentContainer(R.id.fragmentContainerView, CategoriesFragment())
         } else {
             onCategoryItemClick(Category.valueOf(currentTitle))
@@ -67,10 +78,20 @@ class MainActivity : AppCompatActivity(),
         currentTitle = category.toString()
         val btnBack = this@MainActivity.findViewById<ImageButton>(R.id.btn_back)
         this@MainActivity.findViewById<TextView>(R.id.textView).text = currentTitle
-        btnBack.visibility = View.VISIBLE
-        btnBack.setOnClickListener {
-            onBackPressedDispatcher.onBackPressed()
-        }
+
+        btnBack.animate()
+            .withStartAction {
+                btnBack.rotationX = 90F
+                btnBack.visibility = View.VISIBLE
+            }
+            .withEndAction{
+            btnBack.animate()
+                .rotationXBy(90F)
+                .setDuration(200)
+                .setInterpolator(LinearInterpolator())
+                .start()
+            }
+            .start()
         // Replace the current fragment with a new ChaptersFragment for the selected category
         val fragment = ChaptersFragment.newInstance(category)
         replaceFragmentContainer(R.id.fragmentContainerView, fragment)
@@ -78,8 +99,10 @@ class MainActivity : AppCompatActivity(),
 
     override fun onChapterItemClick(chapter: String) {
         // Start the FlashcardActivity for the selected chapter
-        startActivity(FlashcardActivity.newIntent(this@MainActivity, chapter))
-        //overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right)
+        startActivity(FlashcardActivity.newIntent(this@MainActivity, chapter),
+            ActivityOptions.makeSceneTransitionAnimation(
+                this@MainActivity).toBundle()
+        )
     }
 
     fun replaceFragmentContainer(oldFragment: Int, newFragment: Fragment) {

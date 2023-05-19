@@ -1,0 +1,49 @@
+<flashcards>
+    <flashcard>
+        <question><![CDATA[Let \( G \) be a group of order \( 35 \). Show that \( G \) has a normal Sylow \( 7 \)-subgroup.]]></question>
+        <answer><![CDATA[
+            By the Third Sylow Theorem, the number of Sylow \( 7 \)-subgroups of \( G \) must divide \( 35 \) and be congruent to \( 1 \) modulo \( 7 \). Since \( 35 = 5 \times 7 \), the number of Sylow \( 7 \)-subgroups can only be \( 1 \) or \( 5 \).
+            However, if there were \( 5 \) Sylow \( 7 \)-subgroups, each containing \( 7 - 1 = 6 \) elements of order \( 7 \), this would account for \( 30 \) elements, leaving only \( 35 - 30 = 5 \) elements to form a Sylow \( 5 \)-subgroup, which is impossible since the order of a Sylow \( 5 \)-subgroup must divide \( 35 \) and be congruent to \( 1 \) modulo \( 5 \). Hence, there must be a unique Sylow \( 7 \)-subgroup in \( G \), which is therefore normal.
+            (Dummit and Foote, Section 4.5, Exercise 7)
+        ]]></answer>
+    </flashcard>
+    <flashcard>
+        <question><![CDATA[Sylow's Theorem]]></question>
+        <answer><![CDATA[
+            <p><strong>Theorem 18. (Sylow's Theorem)</strong></p>
+            <p>Let G be a group of order \( p^\alpha m \), where \( p \) is a prime not dividing \( m \).</p>
+            <ol>
+                <li>Sylow \( p \)-subgroups of G exist, i.e., Syl\( p \)(G) \(\neq\) 0.</li>
+                <li>If \( P \) is a Sylow \( p \)-subgroup of G and \( Q \) is any \( p \)-subgroup of G, then there exists \( g \in G \) such that \( Q \leq gPg^{-1} \), i.e., \( Q \) is contained in some conjugate of \( P \). In particular, any two Sylow \( p \)-subgroups of G are conjugate in G.</li>
+                <li>The number of Sylow \( p \)-subgroups of G is of the form 1 + \( kp \), i.e., \[ n_p \equiv 1 \, (\text{mod } p). \] Furthermore, \( n_p \) is the index in G of the normalizer \( N_G(P) \) for any Sylow \( p \)-subgroup \( P \), hence \( n_p \) divides \( m \).</li>
+            </ol>
+        ]]></answer>
+    </flashcard>
+    <flashcard>
+        <question><![CDATA[Definition: Sylow \(p-\)subgroups]]></question>
+        <answer><![CDATA[
+            <p><strong>Definition:</strong> Let \(G\) be a group and let \(p\) be a prime.</p>
+            <ol>
+                <li>A group of order \(p^\alpha\) for some \( \alpha \geq 1 \) is called a \(p-\)group. Subgroups of G which are \(p-\)groups are called \(p-\)subgroups.</li>
+                <li>If \(G\) is a group of order \(p^\alpha m\), where \( p \nmid m \), then a subgroup of order \(p^\alpha\) is called a Sylow \(p-\)subgroup of \(G\).</li>
+                <li>Syl\(_p(G)\): The set of Sylow \(p-\)subgroups of \(G\).<br/>
+                    \(n_p(G)\): The number of Sylow \(p-\)subgroups of \(G.\)</li>
+            </ol>
+        ]]></answer>
+    </flashcard>
+
+    <flashcard>
+        <question><![CDATA[Prove that a group of order \( 56 \) has a normal Sylow \( 7 \)-subgroup.]]></question>
+        <answer><![CDATA[
+            By the Third Sylow Theorem, the number of Sylow \( 7 \)-subgroups of \( G \) must divide \( 56 \) and be congruent to \( 1 \) modulo \( 7 \). Since \( 56 = 2^3 \times 7 \), the possible number of Sylow \( 7 \)-subgroups can be \( 1 \), \( 8 \), or \( 56 \). However, if there were \( 8 \) Sylow \( 7 \)-subgroups, each containing \( 7 - 1 = 6 \) elements of order \( 7 \), this would account for \( 48 \) elements, leaving only \( 56 - 48 = 8 \) elements to form a Sylow \( 2 \)-subgroup, which is impossible since the order of a Sylow \( 2 \)-subgroup must divide \( 56 \) and be congruent to \( 1 \) modulo \( 2 \). Similarly, if there were \( 56 \) Sylow \( 7 \)-subgroups, this would account for \( 56 \times 6 = 336 \) elements of order \( 7 \), leaving only \( 56 \) elements to form a Sylow \( 2 \)-subgroup, which is again impossible. Hence, there must be a unique Sylow \( 7 \)-subgroup in \( G \), which is therefore normal.
+            (Dummit and Foote, Section 4.5, Exercise 11)
+        ]]></answer>
+    </flashcard>
+    <flashcard>
+        <question><![CDATA[Let \( G \) be a group of order \( 60 \). Prove that \( G \) is not simple.]]></question>
+        <answer><![CDATA[
+        Assume for contradiction that \( G \) is simple. By the Third Sylow Theorem, the number of Sylow \( 5 \)-subgroups of \( G \) must divide \( 60 \) and be congruent to \( 1 \) modulo \( 5 \). The only possibilities are \( 1 \) or \( 6 \). If there is only \( 1 \) Sylow \( 5 \)-subgroup, then it is normal in \( G \), so assume there are \( 6 \) Sylow \( 5 \)-subgroups. Each Sylow \( 5 \)-subgroup contains \( 5 - 1 = 4 \) elements of order \( 5 \), which accounts for \( 4 \times 6 = 24 \) elements. Since there are \( 60 \) elements in total, there must be \( 60 - 24 = 36 \) elements of order \( 2 \) or \( 3 \). However, if there are \( 36 \) elements of order \( 2 \) or \( 3 \), they can form at most \( 36/2 = 18 \) conjugacy classes. Since \( G \) is simple, there must be \( 60 \) conjugacy classes, which is a contradiction. Therefore, \( G \) cannot be simple.
+        (Dummit and Foote, Section 4.6, Exercise 12)
+    ]]></answer>
+    </flashcard>
+</flashcards>
