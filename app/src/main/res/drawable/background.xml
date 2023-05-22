@@ -1,8 +1,8 @@
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
   <item android:drawable="@drawable/gradient_background"/>
-  <!--
-  <item android:drawable="@drawable/a_space_with_nontrivial_local_homology_1967"
-      android:top="0dp"
-      android:left="0dp"/>
-      -->
+  <item
+      android:drawable="@drawable/a_space_with_nontrivial_local_homology_1967"
+      android:top="1000px"/>
 </layer-list>

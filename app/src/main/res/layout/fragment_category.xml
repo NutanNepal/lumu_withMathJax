@@ -9,7 +9,7 @@
 
     <TextView
         android:id="@+id/item_number"
-        android:layout_width="25dp"
+        android:layout_width="@dimen/index_margin"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/text_margin"
         android:textSize="@dimen/normal_font"
