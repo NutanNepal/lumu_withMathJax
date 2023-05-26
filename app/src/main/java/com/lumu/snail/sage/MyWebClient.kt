@@ -1,6 +1,5 @@
 package com.lumu.snail.sage
 
-import android.webkit.ValueCallback
 import android.webkit.WebResourceError
 import android.webkit.WebResourceRequest
 import android.webkit.WebView
@@ -14,10 +13,10 @@ open class MyWebClient : WebViewClient() {
         return true
     }
 
-
     override fun onPageFinished(view: WebView, url: String) {
         super.onPageFinished(view, url)
 
+        view.setInitialScale(200)
 
         /*
         // Retrieve the contents of the `sagecell_sessionOutput` div class
@@ -39,9 +38,7 @@ open class MyWebClient : WebViewClient() {
             null
         )
          */
-
     }
-
 
     override fun onReceivedError(
         view: WebView?,

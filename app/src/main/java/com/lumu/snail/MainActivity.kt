@@ -16,6 +16,7 @@ import com.lumu.snail.categoriesfragment.MyCategoriesRecyclerViewAdapter
 import com.lumu.snail.chaptersfragment.ChaptersFragment
 import com.lumu.snail.chaptersfragment.MyChaptersRecyclerViewAdapter
 import com.lumu.snail.flashcardsActivity.FlashcardActivity
+import com.lumu.snail.sage.SageActivity
 import com.lumu.snail.tableOfContents.Category
 
 
@@ -104,12 +105,22 @@ class MainActivity : AppCompatActivity(),
     }
 
     override fun onChapterItemClick(chapter: String) {
-        // Start the FlashcardActivity for the selected chapter
-        startActivity(
-            FlashcardActivity.newIntent(this@MainActivity, chapter),
-            ActivityOptions.makeSceneTransitionAnimation(
-                this@MainActivity).toBundle()
-        )
+        if (chapter == "Sage"){
+            startActivity(
+                SageActivity.newIntent(this@MainActivity),
+                ActivityOptions.makeSceneTransitionAnimation(
+                    this@MainActivity).toBundle()
+            )
+            }
+        else{
+            // Start the FlashcardActivity for the selected chapter
+            startActivity(
+                FlashcardActivity.newIntent(this@MainActivity, chapter),
+                ActivityOptions.makeSceneTransitionAnimation(
+                    this@MainActivity).toBundle()
+            )
+        }
+
     }
 
     fun replaceFragmentContainer(oldFragment: Int, newFragment: Fragment) {

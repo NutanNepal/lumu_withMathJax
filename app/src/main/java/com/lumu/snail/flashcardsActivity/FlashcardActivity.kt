@@ -16,8 +16,6 @@ import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.lumu.snail.R
 import com.lumu.snail.features.ZoomOutPageTransformer
-import com.lumu.snail.sage.SageFragment
-import com.lumu.snail.sage.SageParse
 import com.lumu.snail.tableOfContents.Subjects
 import org.xmlpull.v1.XmlPullParser
 import kotlin.random.Random
@@ -94,9 +92,6 @@ class FlashcardActivity: FragmentActivity() {
         // Create a new instance of the FlashcardFragment for each page
         override fun createFragment(position: Int): Fragment {
             val flashcard = flashcards[position % flashcards.size]
-            if(flashcards[0].answer == ""){
-                return SageFragment.newInstance(flashcard.question, flashcard.answer)
-            }
             return FlashcardFragment.newInstance(flashcard.question, flashcard.answer)
         }
     }
@@ -113,11 +108,6 @@ class FlashcardActivity: FragmentActivity() {
 
         val flashcards = mutableListOf<Flashcard>()
         for (filename in chapters){
-
-            if(filename == "Sage"){
-                return mutableListOf(Flashcard(SageParse.generateHtmlContent(), ""))
-            }
-
             val fileName = "$filename.xml"
             val inputStream = fileName.let { assets.open(it) }
 

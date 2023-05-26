@@ -7,4 +7,5 @@
     <dimen name="fragment_margin">8dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="normal_font_holder">20sp</dimen>
+    <dimen name="dimen150dp">150dp</dimen>
 </resources>

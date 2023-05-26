@@ -8,4 +8,6 @@
     <string name="question">Question:</string>
     <string name="answer">Answer:</string>
     <string name="backgroundContent">content</string>
+    <string name="evaluate">evaluateSage</string>
+    <string name="Sage">Sage</string>
 </resources>

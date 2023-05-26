@@ -4,7 +4,7 @@ class SageParse {
 
     companion object{
 
-        fun generateHtmlContent(): String {
+        fun generateHtmlContent(inputSage: String): String {
             return """
                 <html>
                 <head>
@@ -32,7 +32,7 @@ class SageParse {
                 </head>
                 <body>
                     <div class = "sage">
-                        <script type="text/x-sage" id="sage">plot(sin(x), (x, 0, 2*pi))</script>
+                        <script type="text/x-sage" id="sage">$inputSage</script>
                     </div>
                 </body>
                 </html>

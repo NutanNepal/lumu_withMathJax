@@ -39,7 +39,7 @@
             android:textAppearance="@style/CustomTextAppearanceBold"
             android:textColor="@color/white"
             android:textAlignment="center"
-            android:textSize="@dimen/title_font" />
+            android:textSize="@dimen/title_font"/>
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragmentContainerView"

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingVertical="10dp"
+    android:background="@drawable/background">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="0dp"
+            android:layout_toEndOf="@id/sage_title"
+            android:layout_above="@id/linearLayout"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_arrow_back"
+            android:contentDescription="@string/back_button"/>
+
+        <TextView
+            android:id="@+id/sage_title"
+            android:layout_marginTop="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/CustomTextAppearanceBold"
+            android:textAlignment="center"
+            android:text="@string/Sage"
+            android:textSize="@dimen/title_font"/>
+
+        <ImageButton
+        android:id="@+id/evaluate"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="0dp"
+        android:layout_above="@id/linearLayout"
+            android:layout_toStartOf="@+id/sage_title"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/baseline_calculate_24"
+        android:contentDescription="@string/evaluate"/>
+
+        <LinearLayout
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/sage_title"
+            android:orientation="horizontal"
+            android:id="@+id/linearLayout">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/codeView_cardView"
+                android:layout_margin="15dp"
+                card_view:cardBackgroundColor="@color/launcher"
+                card_view:cardCornerRadius="0dp"
+                card_view:cardElevation="100dp"
+                card_view:contentPadding="5dp">
+
+                    <com.amrdeveloper.codeview.CodeView
+                        android:id="@+id/sageEditor"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:dropDownWidth="@dimen/dimen150dp"
+                        android:dropDownHorizontalOffset="0dp"
+                        android:dropDownSelector="@color/launcher"
+                        android:textColor="@color/white"
+                        android:gravity="top|start"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/sageView_cardView"
+                android:layout_margin="15dp"
+                card_view:cardBackgroundColor="@color/launcher"
+                card_view:cardCornerRadius="2dp"
+                card_view:cardElevation="20dp"
+                card_view:contentPadding="5dp"
+                android:visibility="gone">
+
+                    <WebView
+                        android:id="@+id/sageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:clickable="false"
+                        android:focusable="false" />
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/flip_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="@dimen/fab_margin"
+            android:layout_marginBottom="@dimen/fab_margin"
+            android:clickable="true"
+            android:contentDescription="@string/flipper"
+            android:src="@drawable/baseline_flip_24"
+            app:backgroundTint="@color/creamy"
+            app:backgroundTintMode="multiply"
+            app:rippleColor="@color/creamy"/>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

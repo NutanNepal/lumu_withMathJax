@@ -39,6 +39,7 @@
             android:textAppearance="@style/CustomTextAppearanceBold"
             android:textColor="@color/white"
             android:textAlignment="center"
+            android:textIsSelectable="true"
             android:textSize="@dimen/title_font"/>
 
         <androidx.viewpager2.widget.ViewPager2
@@ -59,7 +60,6 @@
             android:layout_marginTop="@dimen/fab_margin"
             android:layout_marginEnd="@dimen/fab_margin"
             android:layout_marginBottom="@dimen/fab_margin"
-            android:background="@drawable/background"
             android:clickable="true"
             android:contentDescription="@string/flipper"
             android:src="@drawable/baseline_flip_24"
