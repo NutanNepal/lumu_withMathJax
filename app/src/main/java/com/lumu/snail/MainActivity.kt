@@ -11,6 +11,12 @@ import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
 import androidx.fragment.app.Fragment
+import com.lumu.snail.categoriesfragment.CategoriesFragment
+import com.lumu.snail.categoriesfragment.MyCategoriesRecyclerViewAdapter
+import com.lumu.snail.chaptersfragment.ChaptersFragment
+import com.lumu.snail.chaptersfragment.MyChaptersRecyclerViewAdapter
+import com.lumu.snail.flashcardsActivity.FlashcardActivity
+import com.lumu.snail.tableOfContents.Category
 
 
 class MainActivity : AppCompatActivity(),
@@ -99,7 +105,8 @@ class MainActivity : AppCompatActivity(),
 
     override fun onChapterItemClick(chapter: String) {
         // Start the FlashcardActivity for the selected chapter
-        startActivity(FlashcardActivity.newIntent(this@MainActivity, chapter),
+        startActivity(
+            FlashcardActivity.newIntent(this@MainActivity, chapter),
             ActivityOptions.makeSceneTransitionAnimation(
                 this@MainActivity).toBundle()
         )

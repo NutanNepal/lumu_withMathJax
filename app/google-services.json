@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "945483999840",
+    "project_id": "lumu-flashcards",
+    "storage_bucket": "lumu-flashcards.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:945483999840:android:c8f5ed91333792c574b105",
+        "android_client_info": {
+          "package_name": "com.lumu.snail"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "945483999840-7e4i8knapeub5vlmn56uv0r71n8pdi0m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTRLYnzolFS9HIw10K8ebmyV0CJLxF9g8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "945483999840-7e4i8knapeub5vlmn56uv0r71n8pdi0m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

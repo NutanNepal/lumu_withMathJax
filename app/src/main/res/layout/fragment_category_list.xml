@@ -10,7 +10,7 @@
     android:layout_marginLeft="@dimen/fragment_margin"
     android:layout_marginRight="@dimen/fragment_margin"
     app:layoutManager="LinearLayoutManager"
-    tools:context=".CategoriesFragment"
+    tools:context=".categoriesfragment.CategoriesFragment"
     tools:listitem="@layout/fragment_category"
     android:clickable="true"
     android:focusable="true"/>

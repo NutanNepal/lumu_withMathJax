@@ -9,5 +9,5 @@
     android:layout_marginLeft="@dimen/fragment_margin"
     android:layout_marginRight="@dimen/fragment_margin"
     app:layoutManager="LinearLayoutManager"
-    tools:context=".ChaptersFragment"
+    tools:context=".chaptersfragment.ChaptersFragment"
     tools:listitem="@layout/fragment_chapters" />

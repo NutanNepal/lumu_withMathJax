@@ -11,11 +11,11 @@
         <question><![CDATA[Sylow's Theorem]]></question>
         <answer><![CDATA[
             <p><strong>Theorem 18. (Sylow's Theorem)</strong></p>
-            <p>Let G be a group of order \( p^\alpha m \), where \( p \) is a prime not dividing \( m \).</p>
+            <p>Let \(G\) be a group of order \( p^\alpha m \), where \( p \) is a prime not dividing \( m \).</p>
             <ol>
-                <li>Sylow \( p \)-subgroups of G exist, i.e., Syl\( p \)(G) \(\neq\) 0.</li>
-                <li>If \( P \) is a Sylow \( p \)-subgroup of G and \( Q \) is any \( p \)-subgroup of G, then there exists \( g \in G \) such that \( Q \leq gPg^{-1} \), i.e., \( Q \) is contained in some conjugate of \( P \). In particular, any two Sylow \( p \)-subgroups of G are conjugate in G.</li>
-                <li>The number of Sylow \( p \)-subgroups of G is of the form 1 + \( kp \), i.e., \[ n_p \equiv 1 \, (\text{mod } p). \] Furthermore, \( n_p \) is the index in G of the normalizer \( N_G(P) \) for any Sylow \( p \)-subgroup \( P \), hence \( n_p \) divides \( m \).</li>
+                <li>Sylow \( p \)-subgroups of \(G\) exist, i.e., Syl\(_p(G)\) \(\neq\) 0.</li>
+                <li>If \( P \) is a Sylow \( p \)-subgroup of \(G\) and \( Q \) is any \( p \)-subgroup of \(G\), then there exists \( g \in G \) such that \( Q \leq gPg^{-1} \), i.e., \( Q \) is contained in some conjugate of \( P \). In particular, any two Sylow \( p \)-subgroups of \(G\) are conjugate in \(G\).</li>
+                <li>The number of Sylow \( p \)-subgroups of \(G\) is of the form 1 + \( kp \), i.e., \[ n_p \equiv 1 \, (\text{mod } p). \] Furthermore, \( n_p \) is the index in \(G\) of the normalizer \( N_G(P) \) for any Sylow \( p \)-subgroup \( P \), hence \( n_p \) divides \( m \).</li>
             </ol>
         ]]></answer>
     </flashcard>
